@@ -46,7 +46,7 @@ sp<MediaSource> createSource(const char *filename) {
 }
 
 clock_t start_time=0, end_time=0;
-int frame_count=0;
+sig_atomic_t frame_count=0;
 
 OMXClient client;
 sp<MediaSource> decoder;
